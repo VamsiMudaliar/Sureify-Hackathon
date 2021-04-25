@@ -1,0 +1,20 @@
+<%- include('./partials/header'); -%>
+<%- include('./partials/navbar'); -%>
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+<body>
+    
+    <div class="d-flex justify-content-center flex-column align-items-center p-3 login-border m-4">
+        <h1 class="text-center text-success">Create an Article </h1>
+    <form class="form-group text-center p-2" action="/articles/create" method="POST" enctype="multipart/form-data" >
+        <input type="text" name="title" class="form-control m-2" placeholder="Enter Title">
+        <textarea type="text" name="description" class="form-control m-2" placeholder="Description"></textarea>
+        <input type="file" class="form-control m-2" name="article_image">
+        <input type="submit" class="btn btn-lg btn-success" value="Post Article">
+    </form>
+    </div>
+
+
+</body>
+  
+
+<%- include('./partials/footer'); -%>

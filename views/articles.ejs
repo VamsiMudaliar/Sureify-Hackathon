@@ -1,0 +1,26 @@
+<%- include('./partials/header'); -%>
+
+<%- include('./partials/navbar'); -%>
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+<head>
+<link href="/css/login_style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="d-flex flex-row">
+        
+      <% articles.forEach(article=>{%>
+        <div class="m-2 card" style="width:18rem">
+        <img class="card-img-top img-thumbnail" src="/<%=article.article_image%>" alt="Card image cap">
+            <div class="p-4" style="color:black">
+                <h5 style="color:black"><%=article.title%></h5>
+                <p class="card-text"><b>Created On :<b><%=article.created_on%></p>
+                <p class="card-text"><b>Posted By :<b>Admin</p>
+                <a href="/articles/view/<%=article._id%>/" class="btn btn-info">View Article</a>
+            </div>
+        </div>
+      <%})%>
+    </div>
+</body>
+  
+
+<%- include('./partials/footer'); -%>
