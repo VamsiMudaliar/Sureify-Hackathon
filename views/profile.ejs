@@ -1,0 +1,44 @@
+<%- include('./partials/header'); -%>
+<%- include('./partials/navbar'); -%>
+
+<body>
+    
+
+    <div class="d-flex justify-content-center bg-success flex-column align-content-center mt-5">
+    <div class="w-50 p-3 text-center">
+        <h2>Looks Like you haven't created Profile yet.</h2>
+    <a class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
+        Create a profile
+    </a>
+    </div>
+    </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Create Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="form-group p-2">
+                  <input type="text" class="form-control p-2" placeholder="Enter Job Title">
+
+                  <input type="text" class="form-control p-2" placeholder="Enter Year of Experience">
+                  
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </form>
+          </div>
+        </div>
+      </div>
+</body>
+  
+
+<%- include('./partials/footer'); -%>

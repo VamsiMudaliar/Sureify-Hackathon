@@ -89,12 +89,14 @@ app.get('/',isLoggedin,(req,res)=>{
 })
 
 app.get('/logout',(req,res)=>{
+  delete app.locals.currentUser
   req.logout();
   res.redirect('/user/login')
 })
 
 app.use('/user',require('./routes/user.js'))
 app.use('/articles',require('./routes/articles.js'))
+app.use('/profile',require('./routes/profile.js'))
 
 
 

@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
+  
   skills:[String],
+  
+  funfacts:[String],
+  
+  languages:[String],
+  
   role:{
       type:String,
       required:true
   },
-  languages:[String],
   location:{
       type:String,
       required:true
@@ -14,6 +19,9 @@ const ProfileSchema = new mongoose.Schema({
   about:{
       type:String,
       required:true
+  },
+  profile_image:{
+      type:String,
   },
   yoe:{
       type:Number,
@@ -25,6 +33,6 @@ const ProfileSchema = new mongoose.Schema({
   }
 });
 
-const Profile = mongoose.model('Profile', ProfieSchema);
+const Profile = mongoose.model('Profile', ProfileSchema);
 
 module.exports = Profile;
